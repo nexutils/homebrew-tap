@@ -5,21 +5,21 @@
 class Stackguard < Formula
   desc "Scan infrastructure and deployment configuration for production-readiness issues"
   homepage "https://github.com/nexutils/StackGuard"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nexutils/StackGuard/releases/download/v0.1.0/stackguard_0.1.0_darwin_amd64.tar.gz"
-      sha256 "91ae66234be9d7ea0e6496465ce69857c7ed10c41312b8445e86c8ee58f00ded"
+      url "https://github.com/nexutils/StackGuard/releases/download/v0.2.0/stackguard_0.2.0_darwin_amd64.tar.gz"
+      sha256 "38c0f255f8653b84de75780cead317e855a9323214ad07695acc623c371a1e6f"
 
       define_method(:install) do
         bin.install "stackguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nexutils/StackGuard/releases/download/v0.1.0/stackguard_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f25b88379215170be3ead14d837a5be07c792adbc56f51db450f30ef40cfbf13"
+      url "https://github.com/nexutils/StackGuard/releases/download/v0.2.0/stackguard_0.2.0_darwin_arm64.tar.gz"
+      sha256 "14b12e963088bc253822320504e01ca3eea773f7b695f0b74c5ea05e2b240103"
 
       define_method(:install) do
         bin.install "stackguard"
@@ -29,15 +29,15 @@ class Stackguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nexutils/StackGuard/releases/download/v0.1.0/stackguard_0.1.0_linux_amd64.tar.gz"
-      sha256 "9e868b43364228414240de431e3e750cd16bfffd1687eb88198fb8655275ab9c"
+      url "https://github.com/nexutils/StackGuard/releases/download/v0.2.0/stackguard_0.2.0_linux_amd64.tar.gz"
+      sha256 "c24c21aea4348c83350f7e3cfb65fa0363cb0e73cb461b833468230e553134a8"
       define_method(:install) do
         bin.install "stackguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nexutils/StackGuard/releases/download/v0.1.0/stackguard_0.1.0_linux_arm64.tar.gz"
-      sha256 "bc34e62ab2400f63d6bceb3f2630a204dee0fab1bc3e730708c60a355ceeb321"
+      url "https://github.com/nexutils/StackGuard/releases/download/v0.2.0/stackguard_0.2.0_linux_arm64.tar.gz"
+      sha256 "8ad142362aaaa9a6abdcc99426f9dcca0ea2d9f1e27e475be2c908b6ba3db675"
       define_method(:install) do
         bin.install "stackguard"
       end
